@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rex Baloot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-room">
+  <div id="scoreBoard" class="score-board">الفريق 1: 0 | الفريق 2: 0</div>
+
+  <div class="table">
+    <div class="player top" id="player2">اللاعب 2</div>
+
+    <div class="middle-row">
+      <div class="player left" id="player1">اللاعب 1</div>
+
+      <div class="center-cards" id="trickArea"></div>
+
+      <div class="player right" id="player3">اللاعب 3</div>
+    </div>
+
+    <div class="player bottom" id="playerYou">أنت</div>
+
+    <div id="myCards" class="my-cards"></div>
+
+    <div id="biddingButtons" class="game-buttons">
+      <button onclick="choose('حكم')">حكم</button>
+      <button onclick="choose('صن')">صن</button>
+      <button onclick="choose('أشكل')">أشكل</button>
+      <button onclick="choose('بس')">بس</button>
+    </div>
+  </div>
+
+  <div id="blotAnnouncement" class="blot-announcement"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
